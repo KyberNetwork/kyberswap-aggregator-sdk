@@ -1,0 +1,44 @@
+{
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/KyberNetwork/kyberswap-aggregator-sdk",
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "name": "@kyberswap/aggregator-sdk",
+  "author": "nguyenhuudungz",
+  "module": "dist/kyberswap-aggregator-sdk.esm.js",
+  "dependencies": {
+    "@dynamic-amm/sdk": "^3.0.23",
+    "@ethersproject/address": "^5.5.0",
+    "@ethersproject/constants": "^5.5.0",
+    "@ethersproject/providers": "^5.5.1",
+    "axios": "^0.24.0",
+    "bignumber.js": "^9.0.2",
+    "ethers": "^5.5.2"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "prettier": "^2.5.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  }
+}
