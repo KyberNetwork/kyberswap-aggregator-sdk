@@ -20,7 +20,6 @@ import { ETHER_ADDRESS, providers, routerUri, ZERO_HEX } from './config'
 import { GetSwapParametersCustomTradeRouteParams, GetSwapParametersParams, SwapV2Parameters } from './types'
 import { getAggregationExecutorAddress, getAggregationExecutorContract, numberToHex, toSwapAddress } from './utils'
 import BigNumber from 'bignumber.js'
-import DMM_ABI from 'abis/dmm-router-v2.json'
 
 /**
  * Returns the best trade for the exact amount of tokens in to the given token out
@@ -365,4 +364,3 @@ export async function getData({
 
 export * from './config/index'
 export * from './types'
-export { DMM_ABI }
