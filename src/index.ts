@@ -9,6 +9,7 @@ import {
   TradeType,
   validateAndParseAddress,
 } from '@dynamic-amm/sdk'
+import DMM_ABI_JSON from 'abis/dmm-router-v2.json'
 import {
   Aggregator,
   encodeFeeConfig,
@@ -365,3 +366,4 @@ export async function getData({
 
 export * from './config/index'
 export * from './types'
+export const DMM_ABI = DMM_ABI_JSON
