@@ -241,12 +241,12 @@ export async function getData({
         const swapSequences = encodeSwapExecutor(tradeRoute, chainId ?? ChainId.MAINNET)
         const sumSrcAmounts = Object.values(src).reduce((sum, value) => sum.plus(value), new BigNumber('0'))
         const sumFirstSwapAmounts = firstSwapAmounts.reduce((sum, value) => sum.plus(value), new BigNumber('0'))
-        const amount = sumSrcAmounts.plus(sumFirstSwapAmounts).toString()
+        const amount = sumSrcAmounts.plus(sumFirstSwapAmounts).toFixed()
         const swapDesc = [
           tokenIn,
           tokenOut,
           Object.keys(src), // srcReceivers
-          Object.values(src).map((amount) => amount.toString()), // srcAmounts
+          Object.values(src).map((amount) => amount.toFixed()), // srcAmounts
           to,
           amount,
           amountOut,
@@ -312,7 +312,7 @@ export async function getData({
           tokenIn,
           tokenOut,
           Object.keys(src), // srcReceivers
-          Object.values(src).map((amount) => amount.toString()), // srcAmounts
+          Object.values(src).map((amount) => amount.toFixed()), // srcAmounts
           to,
           feeConfig && feeConfig.chargeFeeBy === 'currency_in'
             ? feeConfig.isInBps
