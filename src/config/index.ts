@@ -38,12 +38,12 @@ export const providers: {
 
 //https://router.firebird.finance/bsc/route
 export const routerUri: { [chainId in ChainId]?: string } = {
-  [ChainId.MAINNET]: `https://aggregator-api.kyber.org/ethereum/route`,
-  [ChainId.BSCMAINNET]: `https://aggregator-api.kyber.org/bsc/route`,
-  [ChainId.MATIC]: `https://aggregator-api.kyber.org/polygon/route`,
-  [ChainId.AVAXMAINNET]: `https://aggregator-api.kyber.org/avalanche/route`,
-  [ChainId.FANTOM]: `https://aggregator-api.kyber.org/fantom/route`,
-  [ChainId.CRONOS]: `https://aggregator-api.kyber.org/cronos/route`,
+  [ChainId.MAINNET]: `https://aggregator-api.kyberswap.com/ethereum/route`,
+  [ChainId.BSCMAINNET]: `https://aggregator-api.kyberswap.com/bsc/route`,
+  [ChainId.MATIC]: `https://aggregator-api.kyberswap.com/polygon/route`,
+  [ChainId.AVAXMAINNET]: `https://aggregator-api.kyberswap.com/avalanche/route`,
+  [ChainId.FANTOM]: `https://aggregator-api.kyberswap.com/fantom/route`,
+  [ChainId.CRONOS]: `https://aggregator-api.kyberswap.com/cronos/route`,
 }
 
 export const AGGREGATION_EXECUTOR: { [chainId in ChainId]?: string } = {
