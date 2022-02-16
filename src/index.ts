@@ -20,6 +20,7 @@ import { ETHER_ADDRESS, providers, routerUri, ZERO_HEX } from './config'
 import { GetSwapParametersCustomTradeRouteParams, GetSwapParametersParams, SwapV2Parameters } from './types'
 import { getAggregationExecutorAddress, getAggregationExecutorContract, numberToHex, toSwapAddress } from './utils'
 import BigNumber from 'bignumber.js'
+import { getAddress } from 'ethers/lib/utils'
 
 /**
  * Returns the best trade for the exact amount of tokens in to the given token out
@@ -92,9 +93,11 @@ function parseInput({
   const currencyAmountIn: CurrencyAmount =
     currencyInAddress === ETHER_ADDRESS
       ? CurrencyAmount.ether(amountIn)
-      : new TokenAmount(new Token(chainId, currencyInAddress, currencyInDecimals), amountIn)
+      : new TokenAmount(new Token(chainId, getAddress(currencyInAddress), currencyInDecimals), amountIn)
   const currencyOut: Currency =
-    currencyOutAddress === ETHER_ADDRESS ? Currency.ETHER : new Token(chainId, currencyOutAddress, currencyOutDecimals)
+    currencyOutAddress === ETHER_ADDRESS
+      ? Currency.ETHER
+      : new Token(chainId, getAddress(currencyOutAddress), currencyOutDecimals)
 
   return {
     chainId: chainId as ChainId,
