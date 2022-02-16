@@ -30,7 +30,7 @@ export function getContract(address: string, ABI: any, library: Web3Provider): C
   if (!isAddress(address) || address === AddressZero) {
     throw Error(`Invalid 'address' parameter '${address}'.`)
   }
-  return new Contract(address, ABI, library)
+  return new Contract(getAddress(address), ABI, library)
 }
 
 export function getAggregationExecutorContract(chainId: ChainId, library: Web3Provider): Contract {

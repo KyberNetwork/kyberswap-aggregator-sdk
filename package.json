@@ -1,5 +1,5 @@
 {
-  "version": "0.1.12",
+  "version": "0.1.13",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -9,10 +9,10 @@
   "repository": "https://github.com/KyberNetwork/kyberswap-aggregator-sdk",
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "tsdx build && cp -r ./src/abis ./dist",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "tsdx build && cp -r ./src/abis ./dist"
+    "prepublishOnly": "tsdx build"
   },
   "husky": {
     "hooks": {
@@ -23,7 +23,7 @@
   "author": "nguyenhuudungz",
   "module": "dist/kyberswap-aggregator-sdk.esm.js",
   "dependencies": {
-    "@dynamic-amm/sdk": "^3.0.23",
+    "@dynamic-amm/sdk": "^3.0.27",
     "@ethersproject/address": "^5.5.0",
     "@ethersproject/constants": "^5.5.0",
     "@ethersproject/providers": "^5.5.1",
