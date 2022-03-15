@@ -12,6 +12,9 @@ export const NETWORK_URLS: {
   [ChainId.CRONOS]: `https://evm-cronos.crypto.org`,
   [ChainId.ARBITRUM]: ``,
   [ChainId.BTTC]: ``,
+  [ChainId.AURORA]: ``,
+  [ChainId.OASIS]: ``,
+  [ChainId.VELAS]: ``,
   // Testnet
   [ChainId.RINKEBY]: `https://rinkeby.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
   [ChainId.ROPSTEN]: `https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161`,

@@ -1126,10 +1126,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@dynamic-amm/sdk@^3.0.27":
-  version "3.0.27"
-  resolved "https://registry.yarnpkg.com/@dynamic-amm/sdk/-/sdk-3.0.27.tgz#1aa84173e1ddb686a3c2ebddc6b8679154fd2638"
-  integrity sha512-zX9xIBoK2qrjgIsa8zDpY6C7B2OhP4033nsR+1EMbnjlM/sqbHRQl/p/meEwndTFmjDDmAOxuz60Sq1qa1Cpag==
+"@dynamic-amm/sdk@^3.0.33":
+  version "3.0.33"
+  resolved "https://registry.yarnpkg.com/@dynamic-amm/sdk/-/sdk-3.0.33.tgz#a26904bb0253e76da4cecd9fffe5f88358f3b945"
+  integrity sha512-6IFvlA8qQO8NQGdwyZHBtBwyBuh1N9RkK/s5dPGnkDSfr7HmccELU9xCGMzW7jW7T9Sw54Du0bVpkgh5qpQLpw==
   dependencies:
     "@ethersproject/address" "^5.0.2"
     "@ethersproject/contracts" "^5.0.2"
