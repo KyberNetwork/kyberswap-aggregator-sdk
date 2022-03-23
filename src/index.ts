@@ -22,6 +22,8 @@ import { getAggregationExecutorAddress, getAggregationExecutorContract, numberTo
 import BigNumber from 'bignumber.js'
 import { getAddress } from 'ethers/lib/utils'
 
+require('dotenv').config()
+
 /**
  * Returns the best trade for the exact amount of tokens in to the given token out
  */
