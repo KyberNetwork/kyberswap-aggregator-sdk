@@ -1,14 +1,17 @@
 import { ChainId } from '@dynamic-amm/sdk'
 import { ethers } from 'ethers'
 
+const REACT_APP_INFURA_KEY="9aa3d95b3bc440fa88ea12eaa4456161"
+const REACT_APP_AGGREGATOR_API="https://aggregator-api.kyberswap.com"
+
 export const NETWORK_URLS: {
   [chainId in ChainId]: string
 } = {
   [ChainId.MAINNET]: 'https://ethereum.kyber.network/v1/mainnet/geth?appId=prod-dmm-interface',
-  [ChainId.RINKEBY]: `https://rinkeby.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
+  [ChainId.RINKEBY]: `https://rinkeby.infura.io/v3/${REACT_APP_INFURA_KEY}`,
   [ChainId.ROPSTEN]: 'https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
-  [ChainId.GÖRLI]: `https://goerli.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
-  [ChainId.KOVAN]: `https://kovan.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
+  [ChainId.GÖRLI]: `https://goerli.infura.io/v3/${REACT_APP_INFURA_KEY}`,
+  [ChainId.KOVAN]: `https://kovan.infura.io/v3/${REACT_APP_INFURA_KEY}`,
   [ChainId.MUMBAI]: `https://rpc-mumbai.maticvigil.com`,
   [ChainId.MATIC]: `https://polygon.dmm.exchange/v1/mainnet/geth?appId=prod-dmm`,
   [ChainId.BSCTESTNET]: `https://data-seed-prebsc-1-s1.binance.org:8545`,
@@ -51,17 +54,17 @@ export const providers: {
 
 //https://router.firebird.finance/bsc/route
 export const routerUri: { [chainId in ChainId]?: string } = {
-  [ChainId.MAINNET]: `${process.env.REACT_APP_AGGREGATOR_API}/ethereum/route`,
-  [ChainId.BSCMAINNET]: `${process.env.REACT_APP_AGGREGATOR_API}/bsc/route`,
-  [ChainId.MATIC]: `${process.env.REACT_APP_AGGREGATOR_API}/polygon/route`,
-  [ChainId.AVAXMAINNET]: `${process.env.REACT_APP_AGGREGATOR_API}/avalanche/route`,
-  [ChainId.FANTOM]: `${process.env.REACT_APP_AGGREGATOR_API}/fantom/route`,
-  [ChainId.CRONOS]: `${process.env.REACT_APP_AGGREGATOR_API}/cronos/route`,
-  [ChainId.ARBITRUM]: `${process.env.REACT_APP_AGGREGATOR_API}/arbitrum/route`,
-  [ChainId.BTTC]: `${process.env.REACT_APP_AGGREGATOR_API}/bttc/route`,
-  [ChainId.AURORA]: `${process.env.REACT_APP_AGGREGATOR_API}/aurora/route`,
-  [ChainId.VELAS]: `${process.env.REACT_APP_AGGREGATOR_API}/velas/route`,
-  [ChainId.OASIS]: `${process.env.REACT_APP_AGGREGATOR_API}/oasis/route`,
+  [ChainId.MAINNET]: `${REACT_APP_AGGREGATOR_API}/ethereum/route`,
+  [ChainId.BSCMAINNET]: `${REACT_APP_AGGREGATOR_API}/bsc/route`,
+  [ChainId.MATIC]: `${REACT_APP_AGGREGATOR_API}/polygon/route`,
+  [ChainId.AVAXMAINNET]: `${REACT_APP_AGGREGATOR_API}/avalanche/route`,
+  [ChainId.FANTOM]: `${REACT_APP_AGGREGATOR_API}/fantom/route`,
+  [ChainId.CRONOS]: `${REACT_APP_AGGREGATOR_API}/cronos/route`,
+  [ChainId.ARBITRUM]: `${REACT_APP_AGGREGATOR_API}/arbitrum/route`,
+  [ChainId.BTTC]: `${REACT_APP_AGGREGATOR_API}/bttc/route`,
+  [ChainId.AURORA]: `${REACT_APP_AGGREGATOR_API}/aurora/route`,
+  [ChainId.VELAS]: `${REACT_APP_AGGREGATOR_API}/velas/route`,
+  [ChainId.OASIS]: `${REACT_APP_AGGREGATOR_API}/oasis/route`,
 }
 
 export const AGGREGATION_EXECUTOR: { [chainId in ChainId]?: string } = {
