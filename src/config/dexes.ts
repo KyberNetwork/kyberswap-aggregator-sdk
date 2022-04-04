@@ -49,10 +49,14 @@ export const dexListConfig: DexList = {
     icon: 'https://www.logowik.com/content/uploads/images/uniswap-uni7403.jpg',
     chainIds: [ChainId.MAINNET],
   },
+  uniswapv3: {
+    name: 'UniSwap_V3',
+    icon: 'https://www.logowik.com/content/uploads/images/uniswap-uni7403.jpg',
+    chainIds: [ChainId.MAINNET, ChainId.ARBITRUM, ChainId.MATIC],
+  },
   sushiswap: {
     name: 'SushiSwap',
-    icon:
-      'https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_32,q_auto/https://app.sushi.com/images/logo.svg',
+    icon: 'https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_32,q_auto/https://app.sushi.com/images/logo.svg',
     chainIds: [ChainId.MAINNET, ChainId.MATIC, ChainId.FANTOM, ChainId.ARBITRUM, ChainId.BSCMAINNET],
   },
   shibaswap: {
@@ -213,7 +217,19 @@ export const dexListConfig: DexList = {
   synapse: {
     name: 'Synapse',
     icon: 'https://synapseprotocol.com/favicon.ico',
-    chainIds: [ChainId.MAINNET, ChainId.BSCMAINNET, ChainId.MATIC, ChainId.AVAXMAINNET, ChainId.FANTOM],
+    chainIds: [
+      ChainId.MAINNET,
+      ChainId.BSCMAINNET,
+      ChainId.MATIC,
+      ChainId.AVAXMAINNET,
+      ChainId.FANTOM,
+      ChainId.ARBITRUM,
+    ],
+  },
+  saddle: {
+    name: 'Saddle',
+    icon: 'https://saddle.finance/favicon-32x32.png',
+    chainIds: [ChainId.MAINNET, ChainId.FANTOM, ChainId.ARBITRUM],
   },
   balancer: {
     name: 'Balancer',
@@ -393,6 +409,7 @@ export const dexIds: DexTypes = {
   [ChainId.MATIC]: {},
 }
 
+// For encoding
 export const dexTypes: DexTypes = {
   all: {
     curve: 2,
@@ -404,8 +421,10 @@ export const dexTypes: DexTypes = {
     'iron-stable': 4,
     balancer: 6,
     synapse: 4,
+    saddle: 4,
     axial: 4,
     beethovenx: 6,
+    uniswapv3: 5,
   },
   [ChainId.MAINNET]: {},
   [ChainId.BSCMAINNET]: {},
@@ -425,7 +444,8 @@ export const DEX_TO_COMPARE: { [chainId in ChainId]?: DexConfig } = {
   [ChainId.BSCMAINNET]: findDex('pancake'),
   [ChainId.MATIC]: findDex('quickswap'),
   [ChainId.AVAXMAINNET]: findDex('traderjoe'),
-  [ChainId.MAINNET]: findDex('uniswap'),
+  // TODO: check if we need change this to uniswapv3
+  [ChainId.MAINNET]: findDex('uniswapv2'),
   [ChainId.FANTOM]: findDex('spookyswap'),
   [ChainId.CRONOS]: findDex('vvs'),
   [ChainId.AURORA]: findDex('trisolaris'),
